@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParisAirbnb</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="accommodates">Nombre de pièces :</label>
+        <input type="number" id="accommodates" name="accommodates" min="1" step="1" placeholder="Entrez le nombre de pièces" required>
+        
+        <label for="bedrooms">Nombre de chambres :</label>
+        <input type="number" id="bedrooms" name="bedrooms" min="1" step="1" placeholder="Entrez le nombre de chambres" required>
+        
+        <label for="bathrooms">Nombre de salles de bains :</label>
+        <input type="number" id="bathrooms" name="bathrooms" min="1" step="0.5" placeholder="Entrez le nombre de salles de bains" required>        
+        
+        <label for="neighbourhood">Quartier :</label>
+        <select id="neighbourhood" name="neighbourhood" required>
+            <option value="" disabled selected hidden>Choisissez un quartier</option>
+            <option value="Batignolles-Monceau">Batignolles-Monceau</option>
+            <option value="Buttes-Chaumont">Buttes-Chaumont</option>
+            <option value="Buttes-Montmartre">Buttes-Montmartre</option>
+            <option value="Entrepôt">Entrepôt</option>
+            <option value="Gobelins">Gobelins</option>
+            <option value="Ménilmontant">Ménilmontant</option>
+            <option value="Observatoire">Observatoire</option>
+            <option value="Opéra">Opéra</option>
+            <option value="Panthéon">Panthéon</option>
+            <option value="Passy">Passy</option>
+            <option value="Popincourt">Popincourt</option>
+            <option value="Reuilly">Reuilly</option>
+            <option value="Vaugirard">Vaugirard</option>
+        </select>
+
+        <label for="property_type">Type de propriété :</label>
+        <select id="property_type" name="property_type" required>
+            <option value="" disabled selected hidden>Choisissez un type de propriété</option>
+            <option value="Entire rental unit">Logement entier en location</option>
+            <option value="Private room in hostel">Chambre privée dans une auberge</option>
+            <option value="Private room in rental unit">Chambre privée dans un logement en location</option>
+            <option value="Room in boutique hotel">Chambre dans un hôtel de charme</option>
+            <option value="Room in hotel">Chambre dans un hôtel</option>
+        </select>
+
+        <label for="room_type">Type de chambre :</label>
+        <select id="room_type" name="room_type" required>
+            <option value="" disabled selected hidden>Choisissez un type de chambre</option>
+            <option value="Entire home/apt">Logement entier/appartement</option>
+            <option value="non">Non</option>
+        </select>
+
+    
+        <button type="submit">Estimer le prix de votre logement</button>
+    </form>    
+</body>
+</html>
