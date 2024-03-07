@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .result {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .var {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <p>Le prix estimé de votre logement pour une nuitée est de <span class="var">{{ prix_estime }}</span> pouvant varier entre <span class="var">{{ borne_inferieure }}</span> et <span class="var">{{ borne_superieure }}*</span>.</p>
+
+
+
+        <p>*Avec un risque d'erreur de <span class="var">10%</span>.</p>
+    </div>
+</body>
+</html>

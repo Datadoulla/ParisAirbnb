@@ -24,9 +24,13 @@ def index():
         lt = {'bathrooms':bathrooms, 'accommodates':accommodates, 'bedrooms':bedrooms, 
               'neighbour':neighbour, 'property':property, 'room':room}
         
-        #predict = model_predict(dt)
+        predict = model_predict(dt)
         
-        return  model_predict(dt) 
+        prix_estime = predict['predict']
+        borne_inferieure = predict['born_inf']
+        borne_superieure = predict['born_sup']
+        
+        return render_template('predict.html', prix_estime=prix_estime, borne_inferieure=borne_inferieure, borne_superieure=borne_superieure)
 
 
 
