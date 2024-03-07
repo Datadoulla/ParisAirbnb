@@ -1,4 +1,7 @@
 from flask import Flask, request, render_template
+import os
+
+
 from tools.request_funct import continuous_var, neighbour_dummies, property_dummies, room_dummies, request_data
 
 
