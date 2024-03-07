@@ -70,5 +70,6 @@ def request_data(bathrooms, accommodates, bedrooms, neighbour, property, room):
 
 
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
+    print(request_data(1,1,1,'','','Non').T)
  #   request_data(bathrooms, accommodates, bedrooms, neighbour, property, room)
