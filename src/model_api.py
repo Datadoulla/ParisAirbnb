@@ -8,6 +8,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
+    #return 'hii'
     meth = request.method
     if meth == 'GET':
         return render_template('hi.html')
@@ -36,4 +37,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
