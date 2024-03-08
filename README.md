@@ -1,7 +1,14 @@
 ## 🏡 [ParisAirbnb](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/): Prédiction des Prix de Location Airbnb à Paris
 
-## 🎯 Description du Projet
 
+## Table des matières
+
+- [Description du Projet](#-description-du-projet)
+- [Sources des Données et modélisation](#-sources-des-données-et-modélisation)
+- [Utilisation du Projet](#-utilisation-du-projet)
+
+
+## 🎯 Description du Projet
 
 ParisAirbnb est une application web de prédiction des prix de nuitée des logements en location sur les sites spécialisés (nous avons pris comme référence Airbnb). Nous avons développé ParisAirbnb dans un contexte où de nombreux propriétaires de logements à Paris envisagent de louer leurs biens durant la période des Jeux olympiques Paris 2024. Plus largement, cette application cible les propriétaires immobiliers ou toute personne envisageant d'acquérir un bien immobilier dans les 20 arrondissements de Paris pour le mettre en location de courte durée.
 
@@ -55,8 +62,8 @@ Avant de lancer le conteneur, veuillez préciser le port dans le Dockerfile avec
 Vous pouvez choisir un port différent de 5000, mais nous le garderons dans la suite des étapes.
 
 ```bach
-docker run -p <host_port>:<container:port> --name parisaribnb  parisaribnb_img
+docker run -p 5000:5000 --name parisaribnb  parisaribnb_img
 ``` 
 
 
-5000:5000 correspond à `<port_hôte>:<port_conteneur>`.
+`5000:5000` correspond à `<port_hôte>:<port_conteneur>`.
