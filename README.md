@@ -69,3 +69,7 @@ docker run -p 5000:5000 --name parisaribnb  parisaribnb_img
 
 
 `5000:5000` correspond à `<port_hôte>:<port_conteneur>`.
+
+### A venir
+- Ajout de Shapley values pour mettre en avant les points forts des logements
+- Migration vers une interface Streamlit
