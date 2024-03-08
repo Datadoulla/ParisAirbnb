@@ -3,7 +3,7 @@
 ## Prédiction des Prix de Location Airbnb à Paris
 
 
-## Table des matières
+## 📋 Table des matières
 
 - [Description du Projet](#-description-du-projet)
 - [Sources des Données et modélisation](#-sources-des-données-et-modélisation)
