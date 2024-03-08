@@ -1,4 +1,6 @@
-## 🏡 [ParisAirbnb](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/): Prédiction des Prix de Location Airbnb à Paris
+# 🏡 [ParisAirbnb](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/)
+
+## Prédiction des Prix de Location Airbnb à Paris
 
 
 ## Table des matières
