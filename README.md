@@ -1,4 +1,4 @@
-# 🏡 [ParisAirbnb](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/): Prédiction des Prix de Location Airbnb à Paris
+## 🏡 [ParisAirbnb](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/): Prédiction des Prix de Location Airbnb à Paris
 
 ## 🎯 Description du Projet
 
@@ -8,18 +8,18 @@ ParisAirbnb est une application web de prédiction des prix de nuitée des logem
 Ce travail s'inscrit dans un travail d'équipe plus large à retrouver dans ce dépôt [ici](https://github.com/Val832/produit_digital).
 
 ### Objectifs
-- Développer un outil 🛠️ avancé pour la prédiction des prix de location des logements Airbnb à Paris. Pour plus de détails sur les modèles voir [ici](https://github.com/Val832/produit_digital/tree/main/src/data_science/models)
+- Développer un outil 🛠️ avancé pour la prédiction des prix de location des logements Airbnb à Paris. 
 - Fournir des estimations 💸 précises des prix à la nuitée, basées sur les caractéristiques détaillées de chaque logement.
-
-
-### Fonctionnalités et Méthodologie
-- **Estimations Personnalisées** 📋: Utilisation d'un formulaire pour permettre aux utilisateurs de recevoir des estimations basées sur des critères spécifiques.
-- **Interface Utilisateur en VBA** 🖥️: Création d'une interface conviviale pour la saisie des données et l'affichage des résultats.
 
 ### Problématique
 - Comble la lacune de l'outil d'estimation de prix proposé par Airbnb, en offrant des prévisions plus précises et détaillées 🎯.
 
-## 📚 Utilisation et Sources des Données
+### Solution apportée
+- **Estimations Personnalisées** 📋: Utilisation d'un formulaire pour permettre aux utilisateurs de recevoir des estimations basées sur des critères spécifiques.
+- **Interface Utilisateur en VBA** 🖥️: Création d'une interface conviviale pour la saisie des données et l'affichage des résultats.
+
+
+## 📚 Sources des Données et modélisation
 
 ### Source des Données : Inside Airbnb
 - **Provenance** 🌐: Les données proviennent d'Inside Airbnb, une initiative indépendante offrant des analyses détaillées des listings Airbnb.
@@ -30,9 +30,33 @@ Pour plus de détails sur les données et les différents traitements voi [ici](
 
 Pour accéder à la base de données, visitez [Inside Airbnb](http://insideairbnb.com/get-the-data.html).
 
-## 🛠️ Utilisation
+### Modèle
+Pour estimer le prix de la nuitée, nous avons développé plusieurs modèles de machine learning en utilisant des algorithmes de régression tels que la régression linéaire, les arbres de décision, les forêts aléatoires et le boosting. Bien que le modèle de régression linéaire se soit révélé légèrement moins performant que les autres, nous avons décidé de le conserver. En effet, son manque de précision est largement compensé par la capacité qu'il offre à estimer un intervalle d'erreur fiable.
+
+Pour plus de détails sur les modèles voir [ici](https://github.com/Val832/produit_digital/tree/main/src/data_science/models)
+
+
 
 ## 🚀 Utilisation du Projet
 
 Pour estimer le prix de votre logement utilisez ce lien 👉🏿 [ici](https://tryparisairbnb-f7bcf2a9b109.herokuapp.com/)
 
+Pour les plus curieux qui souhaitent faire tourner l'application en local, nous conseillons l'utilisation de conteneurs Docker.
+
+**Construire une image Doker**
+
+```bach
+docker build -t parisaribnb_img . 
+``` 
+
+**Construire et lancer un conteneur Doker**
+
+Avant de lancer le conteneur, veuillez préciser le port dans le Dockerfile avec la ligne `EXPOSE 5000`.
+Vous pouvez choisir un port différent de 5000, mais nous le garderons dans la suite des étapes.
+
+```bach
+docker run -p <host_port>:<container:port> --name parisaribnb  parisaribnb_img
+``` 
+
+
+5000:5000 correspond à `<port_hôte>:<port_conteneur>`.
