@@ -30,9 +30,9 @@ def index():
         
         predict = model_predict(dt)
         
-        prix_estime = predict['predict']
-        borne_inferieure = predict['born_inf']
-        borne_superieure = predict['born_sup']
+        prix_estime = predict['predict']* 0.9372
+        borne_inferieure = predict['born_inf']* 0.9372
+        borne_superieure = predict['born_sup']* 0.9372
         
         return render_template('predict.html', prix_estime=prix_estime, borne_inferieure=borne_inferieure, borne_superieure=borne_superieure)
 
