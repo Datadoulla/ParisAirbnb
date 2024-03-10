@@ -15,9 +15,9 @@ def model_predict(data, model_pkl='models/model_simple_2023.pkl'):
 
  
     srt = {
-    'predict': round(np.exp(srt_pre).iloc[0]*0.9372,0),
-    'born_inf': round(np.exp(srt_conf)[0][0]*0.9372,0),
-    'born_sup': round(np.exp(srt_conf)[0][1]*0.9372,0)
+    'predict': int(np.exp(srt_pre).iloc[0]*0.9372),
+    'born_inf': int(np.exp(srt_conf)[0][0]*0.9372),
+    'born_sup': int(np.exp(srt_conf)[0][1]*0.9372)
     }
 
 
